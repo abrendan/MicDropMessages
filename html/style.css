@@ -1,6 +1,9 @@
 body{
-  background: #343434;
-  color: #ff0000;
+  background-image: url('https://i.ibb.co/zhPZBTt/luke-chesser-Cx-Bx-J3yp9g-unsplash.jpg'); /* Path to your example image */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* The background image does not scroll */
+  color: #000000;
   font-family: 'Segoe UI';
 }
 
@@ -11,18 +14,39 @@ label{
 }
 
 input{
-  background: #aa0000;
-  color: #000000;
+  background: #000000;
+  color: #db65fb;
   font-size: 120%;
   border: none;
 }
 
 .Message{
-  color: #b30000;
+  color: #000000;
 }
 
 
 
 #Title{
   font-size: 300%;
+}
+
+.sitebutton {
+  background-color:transparent;
+  border-radius:28px;
+  border:1px solid #db65fb;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #000000;
+}
+.sitebutton:hover {
+  background-color:transparent;
+}
+.sitebutton:active {
+  position:relative;
+  top:1px;
 }
