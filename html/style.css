@@ -1,5 +1,5 @@
 body{
-  background: #000000;
+  background: #343434;
   color: #ff0000;
   font-family: 'Segoe UI';
 }
@@ -21,11 +21,7 @@ input{
   color: #b30000;
 }
 
-#Main{
-  background: #000000;
-  border-radius: 1%;
-  padding-left: 1%;
-}
+
 
 #Title{
   font-size: 300%;
