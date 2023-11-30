@@ -32,7 +32,7 @@ function onload(){
     }
     for (i = 0; i < messages.length; i++){
         document.getElementById("Message"+i).innerHTML = messages[i];
-        document.getElementById("Message"+i).style.color = "#b30000";
+        document.getElementById("Message"+i).style.color = "#000000";
     }
   })
 }
