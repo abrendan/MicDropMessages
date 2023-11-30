@@ -1,0 +1,32 @@
+body{
+  background: #000000;
+  color: #ff0000;
+  font-family: 'Segoe UI';
+}
+
+label{
+  width: 5%;
+  display: inline-block;
+  text-align: right;
+}
+
+input{
+  background: #aa0000;
+  color: #000000;
+  font-size: 120%;
+  border: none;
+}
+
+.Message{
+  color: #b30000;
+}
+
+#Main{
+  background: #000000;
+  border-radius: 1%;
+  padding-left: 1%;
+}
+
+#Title{
+  font-size: 300%;
+}
