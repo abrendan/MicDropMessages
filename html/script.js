@@ -1,5 +1,5 @@
 var socket;
-var usernameInput
+var usernameInput;
 var chatIDInput;
 var messageInput;
 var chatRoom;
@@ -14,6 +14,13 @@ function onload(){
   messageInput = document.getElementById("ComposedMessage");
   chatRoom = document.getElementById("RoomID");
   dingSound = document.getElementById("Ding");
+
+  // Event listener to send message when Enter key is pressed
+  messageInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") { // Check if Enter was pressed
+      Send(); // Trigger send message
+    }
+  });
 
   socket.on("join", function(room){
     chatRoom.innerHTML = "Current Chatroom : " + room;
@@ -30,9 +37,9 @@ function onload(){
       messages.shift();
       messages.push(message);
     }
-    for (i = 0; i < messages.length; i++){
-        document.getElementById("Message"+i).innerHTML = messages[i];
-        document.getElementById("Message"+i).style.color = "#000000";
+    for (var i = 0; i < messages.length; i++){
+      document.getElementById("Message"+i).innerHTML = messages[i];
+      document.getElementById("Message"+i).style.color = "#000000";
     }
   })
 }
@@ -52,4 +59,8 @@ function Send(){
 
 function delayReset(){
   delay = true;
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
 }

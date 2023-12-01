@@ -1,52 +1,88 @@
-body{
-  background-image: url('https://i.ibb.co/zhPZBTt/luke-chesser-Cx-Bx-J3yp9g-unsplash.jpg'); /* Path to your example image */
-  background-size: cover; /* Cover the entire viewport */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-attachment: fixed; /* The background image does not scroll */
-  color: #000000;
-  font-family: 'Segoe UI';
-}
+  body{
+    background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg'); /* Path to your example image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* The background image does not scroll */
+    color: #000000;
+    font-family: 'Segoe UI';
+  }
 
-label{
-  width: 5%;
-  display: inline-block;
-  text-align: right;
-}
+  label{
+    width: 5%;
+    display: inline-block;
+    text-align: right;
+  }
 
-input{
-  background: #000000;
-  color: #db65fb;
-  font-size: 120%;
-  border: none;
-}
+  input{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #000000;
+    font-size: 120%;
+    border: none;
+    
+  }
 
-.Message{
-  color: #000000;
-}
+  .Message{
+    color: #000000;
+  }
 
+  #Main{
+    padding: 20px; /* Padding added to the main content area */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  }
 
+  #Title{
+    font-size: 300%;
+  }
 
-#Title{
-  font-size: 300%;
-}
+  .button {
+    background-color:transparent;
+    border-radius:28px;
+    border:0px solid #000000;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #000000;
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+    transition: background-color 0.3s ease; /* Transition for button hover effects */
+  }
+  .button:hover {
+    background-color:#000000;
+    color:#ffffff;
 
-.sitebutton {
-  background-color:transparent;
-  border-radius:28px;
-  border:1px solid #db65fb;
-  display:inline-block;
-  cursor:pointer;
-  color:#000000;
-  font-family:Arial;
-  font-size:17px;
-  padding:16px 31px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #000000;
-}
-.sitebutton:hover {
-  background-color:transparent;
-}
-.sitebutton:active {
-  position:relative;
-  top:1px;
-}
+  }
+  .button:active {
+    position:relative;
+    top:1px;
+  }
+
+  /* Add this to your CSS to support dark mode */
+  body.dark-mode {
+    color: #ffffff; /* Light text color for contrast */
+  }
+  /* You might want to customize other elements for dark mode, for example: */
+  .dark-mode #Main {
+    background-color: #333; /* Dark background for main content area */
+  }
+  /* Additional elements can be customized as needed for dark mode... */
+
+  .input {
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .button2 {
+    border-radius: 10px;
+    padding: 6px;
+    transition: background-color 0.3s ease; /* Transition for button hover effects */
+  }
+
+  .button2:hover {
+    background-color:#000000;
+    color:#ffffff;
+  }
+  
