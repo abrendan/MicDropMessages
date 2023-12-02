@@ -64,3 +64,13 @@ function delayReset(){
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
+
+document.addEventListener('keydown', function(event) {
+  // Check if Alt + Ctrl + R are pressed together
+  if (event.altKey && event.ctrlKey && event.key === 'r') {
+    // Prevent the default action to avoid conflicts
+    event.preventDefault(); 
+    // Open the desired webpage in a new window/tab
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  }
+});
