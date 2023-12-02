@@ -67,6 +67,19 @@
   body.dark-mode {
     color: #ffffff; /* Light text color for contrast */
   }
+  body.dark-mode .button {
+    color: #ffffff; /* Dark button background color */
+      }
+
+body.dark-mode .button2 {
+  color: #ffffff; /* Dark button background color */
+    }
+
+body.dark-mode .input {
+  color: #ffffff; /* Dark button background color */
+    }
+
+
   /* You might want to customize other elements for dark mode, for example: */
   .dark-mode #Main {
     background-color: #333; /* Dark background for main content area */

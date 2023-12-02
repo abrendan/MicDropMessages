@@ -39,7 +39,7 @@ function onload(){
     }
     for (var i = 0; i < messages.length; i++){
       document.getElementById("Message"+i).innerHTML = messages[i];
-      document.getElementById("Message"+i).style.color = "#000000";
+      document.getElementById("Message"+i).style.color = getComputedStyle(document.body).color;
     }
   })
 }
