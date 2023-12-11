@@ -1,104 +1,110 @@
-  body{
-    background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg'); /* Path to your example image */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-attachment: fixed; /* The background image does not scroll */
-    color: #000000;
-    font-family: 'Segoe UI';
-  }
-
-  label{
-    width: 5%;
-    display: inline-block;
-    text-align: right;
-  }
-
-  input{
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #000000;
-    font-size: 120%;
-    border: none;
-    
-  }
-
-  .Message{
-    color: #000000;
-
-  }
-
-  #Main{
-    min-height: 94.5vh; /* Stretch to fill the viewport height */
-    padding: 20px; /* Padding added to the main content area */
-    border-radius: 10px;
-    backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-  }
-
-
-  #Title{
-    font-size: 300%;
-  }
-
-  .button {
-    background-color:transparent;
-    border-radius:28px;
-    border:0px solid #000000;
-    display:inline-block;
-    cursor:pointer;
-    color:#000000;
-    font-size:17px;
-    padding:16px 31px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #000000;
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-    transition: background-color 0.3s ease; /* Transition for button hover effects */
-  }
-  .button:hover {
-    background-color:#000000;
-    color:#ffffff;
-
-  }
-  .button:active {
-    position:relative;
-    top:1px;
-  }
-
-  /* Add this to your CSS to support dark mode */
-  body.dark-mode {
-    color: #ffffff; /* Light text color for contrast */
-  }
-  body.dark-mode .button {
-    color: #ffffff; /* Dark button background color */
-      }
-
+body{
+  background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg'); /* Path to your example image */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* The background image does not scroll */
+  color: #000000;
+  font-family: 'Segoe UI';
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+label{
+  min-width: 70px; /* Ensure label has enough width */
+  display: block; /* Make labels stack above inputs and buttons */
+  margin-bottom: 0.5em; /* Provide some space between label and input/button */
+  text-align: left; /* Align text to the left */
+}
+input{
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  font-size: 120%;
+  border: none;
+  width: 100%; /* Full width input fields */
+  box-sizing: border-box; /* Border box sizing for padding and borders */
+  margin-bottom: 1em; /* Provide space below inputs */
+}
+.Message{
+  color: #000000;
+}
+#Main{
+  min-height: 94.5vh; /* Stretch to fill the viewport height */
+  width: 50%;
+  padding: 20px; /* Padding added to the main content area */
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  display: flex; /* Adding flex properties to layout contents */
+  flex-direction: column; /* Stack children elements vertically */
+  align-items: center; /* Centering child elements horizontally */
+}
+#Title{
+  font-size: 300%;
+}
+.button {
+  background-color:transparent;
+  border-radius:28px;
+  border:0px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #000000;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  transition: background-color 0.3s ease; /* Transition for button hover effects */
+  width: auto; /* Width is determined by content within */
+  margin: 0.5em 0; /* Margin around buttons */
+}
+.button:hover {
+  background-color:#000000;
+  color:#ffffff;
+}
+.button:active {
+  position:relative;
+  top:1px;
+}
+/* Add this to your CSS to support dark mode */
+body.dark-mode {
+  color: #ffffff; /* Light text color for contrast */
+  backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
+  background-color: rgba(0, 0, 0, 1); /* Slightly transparent dark background */
+}
+body.dark-mode .button {
+  color: #ffffff; /* Dark button background color */
+}
 body.dark-mode .button2 {
   color: #ffffff; /* Dark button background color */
-    }
-
+}
 body.dark-mode .input {
   color: #ffffff; /* Dark button background color */
-    }
-
-
-  /* You might want to customize other elements for dark mode, for example: */
-  .dark-mode #Main {
-    background-color: #333; /* Dark background for main content area */
+}
+.dark-mode #Main {
+  background-color: #333; /* Dark background for main content area */
+}
+.input {
+  border-radius: 10px;
+  padding: 6px;
+  width: 100%; /* Full width input fields */
+  box-sizing: border-box; /* Border box sizing for padding and borders */
+}
+.button2 {
+  border-radius: 10px;
+  padding: 6px;
+  transition: background-color 0.3s ease; /* Transition for button hover effects */
+  width: auto; /* Width is determined by content within */
+  margin: 0.5em 0; /* Margin around buttons */
+}
+.button2:hover {
+  background-color:#000000;
+  color:#ffffff;
+}
+@media (max-width: 600px) {
+  label {
+    width: auto; /* Full width on narrow screens */
   }
-  /* Additional elements can be customized as needed for dark mode... */
-
-  .input {
-    border-radius: 10px;
-    padding: 6px;
+  #Main {
+    width: 100%; /* Full width on narrow screens */
   }
-
-  .button2 {
-    border-radius: 10px;
-    padding: 6px;
-    transition: background-color 0.3s ease; /* Transition for button hover effects */
-  }
-
-  .button2:hover {
-    background-color:#000000;
-    color:#ffffff;
-  }
-  
+}
