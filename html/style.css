@@ -4,7 +4,7 @@ body{
   background-repeat: no-repeat; /* Do not repeat the image */
   background-attachment: fixed; /* The background image does not scroll */
   color: #000000;
-  font-family: 'Segoe UI';
+  font-family: 'Roboto';
   display: flex; /* Use flexbox to center content */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -39,7 +39,11 @@ input{
   align-items: center; /* Centering child elements horizontally */
 }
 #Title{
+  font-family: 'Segoe UI';
   font-size: 300%;
+}
+#LinkButtons{
+  display: inline-block;
 }
 .button {
   background-color:transparent;

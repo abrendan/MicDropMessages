@@ -4,6 +4,7 @@
     <title> MicDropMessages </title>
     <meta name = "charset" charset = "utf-8">
     <meta name = "viewport" content = "width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
     <script src = "script.js"></script>
     <script src= "socket.io/socket.io.js"></script>
@@ -11,7 +12,7 @@
   <body onload = "onload()">
     <div id = "Main">
       <audio id = "Ding" src = "Ding.mp3"> </audio>
-      <h1 id = "Title"> MicDropMessages V1.4 </h1>
+      <h1 id = "Title"> MicDropMessages V1.5 </h1>
       <p>Welcome to MicDropMessages! This small webbased application allows you to chat with your friends anonymously! To start, enter your username and enter a chatroom.</p>
       <div id = "AccessPort">
         <label id = "NameLabel"> Username  </label>
@@ -37,9 +38,12 @@
         <input id = "ComposedMessage" class="input" type = "text">
         <input id = "SendMessage" onclick="Send()" value = "Send your message" class="button2" type = "submit">
       </div>
-      <p>Made by abrendan. Visit my website for more of my projects.</p>
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
-      <button onclick=" window.open('http://www.abrendan.dev','_blank')" class="button">abrendan.dev</button>
+      <p>Made by abrendan. Visit my website for more of my projects.</p>
+      <div id="LinkButtons">
+        <button id="GitHubButton" onclick=" window.open('https://github.com/abrendan/MicDropMessages','_blank')" class="button">GitHub Page for MicDropMessages</button>
+        <button id="WebsiteButton" onclick=" window.open('http://www.abrendan.dev','_blank')" class="button">abrendan.dev</button>
+      </div>
       <br><br>
     </div>
   </body>
