@@ -104,11 +104,16 @@ body.dark-mode .input {
   background-color:#000000;
   color:#ffffff;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   label {
     width: auto; /* Full width on narrow screens */
   }
   #Main {
     width: 100%; /* Full width on narrow screens */
   }
+  .container, .content, body {
+    padding-left: 20px; /* Increase the left padding */
+    padding-right: 20px; /* Increase the right padding */
+  }
 }
+
