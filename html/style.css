@@ -1,5 +1,5 @@
 body{
-  background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg'); /* Path to your example image */
+  background-image: url('https://micdropmessages.app/pictures/jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg'); /* Path to your example image */
   background-size: cover; /* Cover the entire viewport */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-attachment: fixed; /* The background image does not scroll */
@@ -71,7 +71,7 @@ input{
 /* Add this to your CSS to support dark mode */
 body.dark-mode {
   color: #ffffff; /* Light text color for contrast */
-  backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
+  
   background-color: rgba(0, 0, 0, 1); /* Slightly transparent dark background */
 }
 body.dark-mode .button {
@@ -84,7 +84,7 @@ body.dark-mode .input {
   color: #ffffff; /* Dark button background color */
 }
 .dark-mode #Main {
-  background-color: #333; /* Dark background for main content area */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
 }
 .input {
   border-radius: 10px;
