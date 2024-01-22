@@ -27,6 +27,9 @@ input{
 .Message{
   color: #000000;
 }
+#Logo{
+  height: 80px;
+}
 #Main{
   min-height: 94.5vh; /* Stretch to fill the viewport height */
   width: 50%;
@@ -38,6 +41,7 @@ input{
   display: flex; /* Adding flex properties to layout contents */
   flex-direction: column; /* Stack children elements vertically */
   align-items: center; /* Centering child elements horizontally */
+  position: relative; /* To position the version number correctly */
 }
 #Title{
   font-size: 300%;
@@ -87,6 +91,9 @@ body.dark-mode .input {
 .dark-mode #Main {
   background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
 }
+body.dark-mode .version-number {
+  color: #ffffff; /* Dark button background color */
+}
 .input {
   border-radius: 10px;
   padding: 6px;
@@ -104,6 +111,15 @@ body.dark-mode .input {
   background-color:#000000;
   color:#ffffff;
 }
+
+.version-number {
+  position: absolute;
+  bottom: 1px;
+  right: 10px;
+  font-size: 0.75em;
+  color: #000000; /* Assuming light text for visibility against a potentially dark background */
+}
+
 @media (max-width: 800px) {
   label {
     width: auto; /* Full width on narrow screens */
