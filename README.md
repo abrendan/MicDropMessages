@@ -2,7 +2,10 @@
 
 MicDropMessages is a basic chat platform using socket.io and JavaScript. Now with a simple dark mode option!
 
-![mdm2](https://github.com/abrendan/MicDropMessages/assets/94894839/e7541c59-6210-4e08-a5a2-c5fdd137e2f7)
+![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/2cb8c5e6-ea6a-4a88-9218-45c58926ba4e)
+
+
+![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/80878a4a-336a-4071-a480-0fe68f090bcd)
 
 
 
