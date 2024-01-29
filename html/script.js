@@ -44,23 +44,31 @@ function onload(){
       document.getElementById("Message"+i).style.color = getComputedStyle(document.body).color;
     }
   })
+
+  // Ensure that the error popup is not displayed when the page is loaded
+  document.getElementById('errorPopup').style.display = 'none';
 }
 
 function Connect(){
-  // Get the username and room from the input fields
   var username = usernameInput.value.trim();
   var room = chatIDInput.value.trim();
-
-  // Check if the username and room are not empty
   if(username && room){
     socket.emit("join", room, username);
     chatRoom.innerHTML = "Chatroom : " + room;
-    // Hide the chat div initially when attempting to connect
     document.getElementById("Chat").style.display = "none";
     document.getElementById('AccessPort').style.display = 'none';
   } else {
-    // Maybe show an error message to the user that they need to fill in both fields
+    showErrorPopup("Please enter a username and a chatroom.");
   }
+}
+
+function showErrorPopup(message) {
+  document.getElementById('errorText').textContent = message;
+  document.getElementById('errorPopup').style.display = 'flex';
+}
+
+function closeErrorPopup() {
+  document.getElementById('errorPopup').style.display = 'none';
 }
 
 function LeaveRoom(){
