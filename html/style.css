@@ -27,6 +27,10 @@ input{
 .Message{
   color: #000000;
 }
+.other {
+  width: 100%; /* Set width */
+  text-align: center; /* Center inline and inline-block elements within */
+}
 #Logo{
   height: 80px;
 }
