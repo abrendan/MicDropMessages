@@ -57,8 +57,27 @@ function Connect(){
     chatRoom.innerHTML = "Chatroom : " + room;
     // Hide the chat div initially when attempting to connect
     document.getElementById("Chat").style.display = "none";
+    document.getElementById('AccessPort').style.display = 'none';
   } else {
     // Maybe show an error message to the user that they need to fill in both fields
+  }
+}
+
+function LeaveRoom(){
+  // Show access port to join another chat room.
+  document.getElementById('AccessPort').style.display = 'block';
+
+  // Hide the chat div as the user is leaving the room.
+  document.getElementById('Chat').style.display = 'none';
+
+  // Reset chatRoom text to indicate no room connection.
+  chatRoom.innerHTML = "Chatroom : None";
+
+  // If the user is in a room, emit a leave event.
+  if (rooms[socket.id]) {
+    socket.emit('leave', rooms[socket.id], usernames[socket.id]);
+    rooms[socket.id] = null;
+    usernames[socket.id] = null;
   }
 }
 
