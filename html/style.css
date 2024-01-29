@@ -167,4 +167,12 @@ body.dark-mode .version-number {
     padding: 20px 40px; /* Increase the padding to make the button bigger */
     font-size: 20px; /* Increase the font-size for better readability on small screens */
   }
+  #LeaveRoomButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 20px 40px; /* Increase the padding to make the button bigger */
+    font-size: 20px; /* Increase the font-size for better readability on small screens */
+  }
 }
