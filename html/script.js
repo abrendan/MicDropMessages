@@ -24,6 +24,8 @@ function onload(){
 
   socket.on("join", function(room){
     chatRoom.innerHTML = "Current Chatroom : " + room;
+    // Show the chat div when successfully joined a room.
+    document.getElementById("Chat").style.display = "block";
   })
 
   socket.on("recieve", function(message){
@@ -45,7 +47,19 @@ function onload(){
 }
 
 function Connect(){
-  socket.emit("join", chatIDInput.value, usernameInput.value);
+  // Get the username and room from the input fields
+  var username = usernameInput.value.trim();
+  var room = chatIDInput.value.trim();
+
+  // Check if the username and room are not empty
+  if(username && room){
+    socket.emit("join", room, username);
+    chatRoom.innerHTML = "Chatroom : " + room;
+    // Hide the chat div initially when attempting to connect
+    document.getElementById("Chat").style.display = "none";
+  } else {
+    // Maybe show an error message to the user that they need to fill in both fields
+  }
 }
 
 function Send(){

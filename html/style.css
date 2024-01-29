@@ -30,6 +30,9 @@ input{
 #Logo{
   height: 80px;
 }
+#Chat{
+  display: none;
+}
 #Main{
   min-height: 94.5vh; /* Stretch to fill the viewport height */
   width: 50%;
