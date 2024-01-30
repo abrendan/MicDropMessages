@@ -36,4 +36,11 @@ io.on('connection', function(socket){
   socket.on("recieve", function(message){
     socket.emit("recieve", message);
   })
+
+  socket.on("leave", function(room, username){
+    if (room && username) {
+      socket.leave(room);
+      io.in(room).emit("recieve", "Server : " + username + " has left the chat.");
+    }
+  });
 })

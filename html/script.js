@@ -72,6 +72,11 @@ function closeErrorPopup() {
 }
 
 function LeaveRoom(){
+  if (chatRoom.innerHTML.includes("Chatroom")) {
+    var roomName = chatRoom.innerHTML.split(" : ")[1];
+    var username = usernameInput.value;
+    socket.emit('leave', roomName, username);
+  }
   // Show access port to join another chat room.
   document.getElementById('AccessPort').style.display = 'block';
 
