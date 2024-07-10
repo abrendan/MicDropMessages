@@ -1,11 +1,22 @@
-# MicDropMessages
+# MicDropMessagesV2
 
-MicDropMessages is a basic chat platform using socket.io and JavaScript. Now with a simple dark mode option!
+MicDropMessages is a basic chat platform using socket.io and JavaScript. It doesn't save any messages on any server.
 
-![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/2cb8c5e6-ea6a-4a88-9218-45c58926ba4e)
+## Android App
+
+MicDropMessages is available as an webapp at https://micdropmessages.app but also as an app in the Google Play Store:
+
+https://play.google.com/store/apps/details?id=com.abrendan.micdropmessages
+
+## Screenshots
+
+![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/13ba80a7-d4df-47ec-b86f-2a8e921c3d1a)
 
 
-![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/80878a4a-336a-4071-a480-0fe68f090bcd)
+
+
+![grafik](https://github.com/abrendan/MicDropMessages/assets/94894839/d4e4a1c4-f194-460a-a31a-76798da58f26)
+
 
 
 
