@@ -26,7 +26,7 @@ function onload(){
     chatRoom.innerHTML = "Current Chatroom : " + room;
     // Show the chat div when successfully joined a room.
     document.getElementById("Chat").style.display = "block";
-  })
+  });
 
   socket.on("recieve", function(message){
     console.log(message);
@@ -34,8 +34,7 @@ function onload(){
       messages.push(message);
       dingSound.currentTime = 0;
       dingSound.play();
-    }
-    else{
+    } else {
       messages.shift();
       messages.push(message);
     }
@@ -43,7 +42,7 @@ function onload(){
       document.getElementById("Message"+i).innerHTML = messages[i];
       document.getElementById("Message"+i).style.color = getComputedStyle(document.body).color;
     }
-  })
+  });
 
   // Ensure that the error popup is not displayed when the page is loaded
   document.getElementById('errorPopup').style.display = 'none';
@@ -105,10 +104,6 @@ function Send(){
 
 function delayReset(){
   delay = true;
-}
-
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
 }
 
 document.addEventListener('keydown', function(event) {

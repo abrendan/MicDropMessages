@@ -2,53 +2,52 @@
 <html>
   <head>
     <title> MicDropMessages </title>
-    <meta name = "charset" charset = "utf-8">
-    <meta name = "viewport" content = "width=device-width">
+    <meta name="charset" charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="https://i.ibb.co/jvVTdPM/nobackground-withoutname2.png">
-    <script src = "script.js"></script>
-    <script src= "socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+    <script src="socket.io/socket.io.js"></script>
   </head>
-  <body onload = "onload()">
-    <div id = "Main">
-      <audio id = "Ding" src = "Ding.mp3"> </audio>
-      <h1 id = "Title"> MicDropMessages V2 </h1>
-      <p>Welcome to MicDropMessages! This small webbased application allows you to chat with your friends anonymously! To start, enter your username and enter a chatroom.</p>
-      <div id = "AccessPort">
-        <label id = "NameLabel"> Username  </label>
-        <input id = "NameInput" class="input" type = "text">
+  <body onload="onload()">
+    <div id="Main">
+      <audio id="Ding" src="new-notification.mp3"> </audio>
+      <h1 id="Title"> MicDropMessagesV2</h1>
+      <p>Welcome to MicDropMessages! This small web-based application allows you to chat with your friends anonymously! To start, enter your username and enter a chatroom.</p>
+      <div id="AccessPort">
+        <label id="NameLabel"> Username </label>
+        <input id="NameInput" class="input" type="text">
         <br><br>
-        <label id = "IDLabel"> Chatroom </label>
-        <input id = "IDInput" class="input" value = "Room1" type = "text">
-        <input id = "ConnectButton" class="button2" type = "submit" value = "Connect" onclick = "Connect()">
+        <label id="IDLabel"> Chatroom </label>
+        <input id="IDInput" class="input" value="Room1" type="text">
+        <input id="ConnectButton" class="button2" type="submit" value="Connect" onclick="Connect()">
       </div>
-      <h2 id = "RoomID"> Chatroom : None </h2>
-      <div id = "Chat" >
-        <p id = "Message0" class = "Message"> - </p>
-        <p id = "Message1" class = "Message"> - </p>
-        <p id = "Message2" class = "Message"> - </p>
-        <p id = "Message3" class = "Message"> - </p>
-        <p id = "Message4" class = "Message"> - </p>
-        <p id = "Message5" class = "Message"> - </p>
-        <p id = "Message6" class = "Message"> - </p>
-        <p id = "Message7" class = "Message"> - </p>
-        <p id = "Message8" class = "Message"> - </p>
-        <p id = "Message9" class = "Message"> - </p>
-        <label id = "MessageLabel"> Message </label>
-        <input id = "ComposedMessage" class="input" type = "text">
-        <input id = "SendMessage" onclick="Send()" value = "Send your message" class="button2" type = "submit">
+      <h2 id="RoomID"> Chatroom : None </h2>
+      <div id="Chat">
+        <p id="Message0" class="Message"> - </p>
+        <p id="Message1" class="Message"> - </p>
+        <p id="Message2" class="Message"> - </p>
+        <p id="Message3" class="Message"> - </p>
+        <p id="Message4" class="Message"> - </p>
+        <p id="Message5" class="Message"> - </p>
+        <p id="Message6" class="Message"> - </p>
+        <p id="Message7" class="Message"> - </p>
+        <p id="Message8" class="Message"> - </p>
+        <p id="Message9" class="Message"> - </p>
+        <label id="MessageLabel"> Message </label>
+        <input id="ComposedMessage" class="input" type="text">
+        <input id="SendMessage" onclick="Send()" value="Send your message" class="button2" type="submit">
         <input id="LeaveRoomButton" class="button2" type="submit" value="Leave Room" onclick="LeaveRoom()">
       </div>
-      <div class = "other">
-        <button id="darkModeToggle" onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
+      <div class="other">
         <p>Made by abrendan. Visit my website for more of my projects.</p>
         <div id="LinkButtons">
-          <button id="GitHubButton" onclick=" window.open('https://github.com/abrendan/MicDropMessages','_blank')" class="button">GitHub Page for MicDropMessages</button>
-          <button id="WebsiteButton" onclick=" window.open('http://www.abrendan.dev','_blank')" class="button">abrendan.dev</button>
+          <button id="GitHubButton" onclick="window.open('https://github.com/abrendan/MicDropMessages','_blank')" class="button">GitHub Page for MicDropMessages</button>
+          <button id="WebsiteButton" onclick="window.open('http://www.abrendan.dev','_blank')" class="button">abrendan.dev</button>
         </div>
       </div>
-      <p class="version-number">V2.1.0</p>
+      <p class="version-number">V2.2.0</p>
     </div>
     <div id="errorPopup" class="error-popup">
       <p id="errorText">Please enter a username and a chatroom.</p>

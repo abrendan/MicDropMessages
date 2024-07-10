@@ -1,42 +1,53 @@
 body{
-  background-image: url('https://micdropmessages.app/pictures/jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg'); /* Path to your example image */
+  background-image: url('https://micdropmessages.app/pictures/andy-holmes-rCbdp8VCYhQ-unsplash.jpg'); /* Path to your example image */
   background-size: cover; /* Cover the entire viewport */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-attachment: fixed; /* The background image does not scroll */
-  color: #000000;
+  color: #ffffff; /* Light text color for contrast */
   font-family: 'Roboto';
   display: flex; /* Use flexbox to center content */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
+
 label{
   min-width: 70px; /* Ensure label has enough width */
   display: block; /* Make labels stack above inputs and buttons */
   margin-bottom: 0.5em; /* Provide some space between label and input/button */
   text-align: left; /* Align text to the left */
 }
+
 input{
   background-color: rgba(255, 255, 255, 0.15);
-  color: #000000;
+  color: #ffffff; /* Light text color for contrast */
   font-size: 120%;
   border: none;
   width: 100%; /* Full width input fields */
   box-sizing: border-box; /* Border box sizing for padding and borders */
   margin-bottom: 1em; /* Provide space below inputs */
 }
+
 .Message{
-  color: #000000;
+  color: #ffffff; /* Light text color for contrast */
+  word-wrap: break-word; /* Break long words */
+  word-break: break-all; /* Break long words */
+  white-space: pre-wrap; /* Wrap text maintaining white spaces */
 }
+
 .other {
   width: 100%; /* Set width */
   text-align: center; /* Center inline and inline-block elements within */
 }
+
 #Logo{
   height: 80px;
 }
+
 #Chat{
   display: none;
+  width: 100%; /* Make the chat part fill the entire width */
 }
+
 #Main{
   min-height: 94.5vh; /* Stretch to fill the viewport height */
   width: 50%;
@@ -44,18 +55,21 @@ input{
   border-radius: 10px;
   backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
   -webkit-backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly transparent dark background */
   display: flex; /* Adding flex properties to layout contents */
   flex-direction: column; /* Stack children elements vertically */
   align-items: center; /* Centering child elements horizontally */
   position: relative; /* To position the version number correctly */
 }
+
 #Title{
   font-size: 300%;
 }
+
 #LinkButtons{
   display: inline-block;
 }
+
 #ConnectButton {
   display: block;
   margin: 0 auto;
@@ -63,6 +77,7 @@ input{
   padding: 20px 40px; /* Increase the padding to make the button bigger */
   font-size: 20px; /* Increase the font-size for better readability on small screens */
 }
+
 #errorButton {
   padding: 16px 31px;
   border-radius: 10px;
@@ -71,10 +86,9 @@ input{
   width: auto;
   margin: 0.5em 0;
   background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-  transition: background-color 0.3s ease; /* Transition for button hover effects */
   border: 0px solid #000000;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff; /* Light text color for contrast */
   font-size: 17px;
   text-shadow: 0px 1px 0px #000000;
   display: block;
@@ -90,9 +104,11 @@ input{
   position: relative;
   top: 1px;
 }
+
 #errorText {
   margin-left: 20px;
 }
+
 .error-popup {
   display: none;
   position: fixed;
@@ -119,76 +135,53 @@ input{
   border-radius: 5px;
   text-align: center; /* Center the content inside the error popup */
 }
+
 .button {
-  background-color:transparent;
-  border-radius:28px;
-  border:0px solid #000000;
-  display:inline-block;
-  cursor:pointer;
-  color:#000000;
-  font-size:17px;
-  padding:16px 31px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #000000;
   background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  border-radius: 28px;
+  border: 0px solid #000000;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff; /* Light text color for contrast */
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #000000;
   transition: background-color 0.3s ease; /* Transition for button hover effects */
   width: auto; /* Width is determined by content within */
   margin: 0.5em 0; /* Margin around buttons */
 }
-.button:hover {
-  background-color:#000000;
-  color:#ffffff;
-}
-.button:active {
-  position:relative;
-  top:1px;
-}
-/* Add this to your CSS to support dark mode */
-body.dark-mode {
-  color: #ffffff; /* Light text color for contrast */
-  
-  background-color: rgba(0, 0, 0, 1); /* Slightly transparent dark background */
-}
-body.dark-mode .button {
-  color: #ffffff; /* Dark button background color */
-}
-body.dark-mode .button2 {
-  color: #ffffff; /* Dark button background color */
-}
-body.dark-mode .input {
-  color: #ffffff; /* Dark button background color */
-}
-.dark-mode #Main {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
-}
-body.dark-mode .version-number {
-  color: #ffffff; /* Dark button background color */
-}
-body.dark-mode #errorButton {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
 
-body.dark-mode #errorButton:hover {
+.button:hover {
   background-color: #000000;
   color: #ffffff;
 }
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
 .input {
   border-radius: 10px;
   padding: 6px;
-  width: 100%; /* Full width input fields */
-  box-sizing: border-box; /* Border box sizing for padding and borders */
+  width: 100%;  /* Full width input fields */
+  box-sizing: border-box;  /* Border box sizing for padding and borders */
 }
+
 .button2 {
   border-radius: 10px;
   padding: 6px;
   transition: background-color 0.3s ease; /* Transition for button hover effects */
   width: auto; /* Width is determined by content within */
   margin: 0.5em 0; /* Margin around buttons */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
+  color: #ffffff; /* Light text color for contrast */
 }
+
 .button2:hover {
-  background-color:#000000;
-  color:#ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .version-number {
@@ -196,7 +189,7 @@ body.dark-mode #errorButton:hover {
   bottom: 1px;
   right: 10px;
   font-size: 0.75em;
-  color: #000000; /* Assuming light text for visibility against a potentially dark background */
+  color: #ffffff; /* Light text color for contrast */
 }
 
 @media (max-width: 800px) {
@@ -207,6 +200,7 @@ body.dark-mode #errorButton:hover {
     width: 100%; /* Full width on narrow screens */
   }
 }
+
 @media (max-width: 650px) {
   #Title {
     font-size: 150%;
