@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.abrendan.micdropmessages",
+    "sha256_cert_fingerprints":
+    ["F4:68:84:2F:72:FC:E3:DC:82:A8:AC:73:FA:EA:0D:E9:9D:20:CD:07:D5:91:55:C7:E6:ED:49:9F:61:80:54:84"]
+  }
+}]

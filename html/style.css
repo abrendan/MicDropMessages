@@ -192,7 +192,7 @@ input{
   color: #ffffff; /* Light text color for contrast */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   label {
     width: auto; /* Full width on narrow screens */
   }
