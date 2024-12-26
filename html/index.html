@@ -4,7 +4,12 @@
     <title> MicDropMessages </title>
     <meta name="charset" charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600&display=swap' rel='stylesheet'>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="https://i.ibb.co/jvVTdPM/nobackground-withoutname2.png">
     <script src="script.js"></script>
@@ -13,7 +18,7 @@
   <body onload="onload()">
     <div id="Main">
       <audio id="Ding" src="new-notification.mp3"> </audio>
-      <h1 id="Title"> MicDropMessagesV2</h1>
+      <h1 id="Title"> MicDropMessages</h1>
       <img id="Logo" src="https://micdropmessages.app/pictures/mdm2logo1.png" alt="Logo">
       <p>Welcome to MicDropMessages! This small web-based application allows you to chat with your friends anonymously! To start, enter your username and enter a chatroom.</p>
       <div id="AccessPort">
@@ -24,7 +29,7 @@
         <input id="IDInput" class="input" value="Room1" type="text">
         <input id="ConnectButton" class="button2" type="submit" value="Connect" onclick="Connect()">
       </div>
-      <h2 id="RoomID"> Chatroom : None </h2>
+      <h2 id="RoomID"> Chatroom: None </h2>
       <div id="Chat">
         <p id="Message0" class="Message"> - </p>
         <p id="Message1" class="Message"> - </p>
@@ -35,7 +40,6 @@
         <p id="Message6" class="Message"> - </p>
         <p id="Message7" class="Message"> - </p>
         <p id="Message8" class="Message"> - </p>
-        <p id="Message9" class="Message"> - </p>
         <label id="MessageLabel"> Message </label>
         <input id="ComposedMessage" class="input" type="text">
         <input id="SendMessage" onclick="Send()" value="Send your message" class="button2" type="submit">
@@ -48,11 +52,13 @@
           <button id="WebsiteButton" onclick="window.open('http://www.abrendan.dev','_blank')" class="button">abrendan.dev</button>
         </div>
       </div>
-      <p class="version-number">V2.2.1</p>
+      <p class="version-number">V2.3.0</p>
     </div>
     <div id="errorPopup" class="error-popup">
-      <p id="errorText">Please enter a username and a chatroom.</p>
-      <button id="errorButton" class="button2" onclick="closeErrorPopup()">Continue</button>
+      <div class="error-popup-content">
+        <p id="errorText">Please enter a username and a chatroom.</p>
+        <button id="errorButton" class="button2" onclick="closeErrorPopup()">Continue</button>
+      </div>
     </div>
   </body>
 </html>

@@ -23,7 +23,7 @@ function onload(){
   });
 
   socket.on("join", function(room){
-    chatRoom.innerHTML = "Current Chatroom : " + room;
+    chatRoom.innerHTML = "Current Chatroom: " + room;
     // Show the chat div when successfully joined a room.
     document.getElementById("Chat").style.display = "block";
   });
@@ -53,8 +53,7 @@ function Connect(){
   var room = chatIDInput.value.trim();
   if(username && room){
     socket.emit("join", room, username);
-    chatRoom.innerHTML = "Chatroom : " + room;
-    document.getElementById("Chat").style.display = "none";
+    chatRoom.innerHTML = "Chatroom: " + room;
     document.getElementById('AccessPort').style.display = 'none';
   } else {
     showErrorPopup("Please enter a username and a chatroom.");
@@ -72,7 +71,7 @@ function closeErrorPopup() {
 
 function LeaveRoom(){
   if (chatRoom.innerHTML.includes("Chatroom")) {
-    var roomName = chatRoom.innerHTML.split(" : ")[1];
+    var roomName = chatRoom.innerHTML.split(": ")[1];
     var username = usernameInput.value;
     socket.emit('leave', roomName, username);
   }
@@ -83,7 +82,7 @@ function LeaveRoom(){
   document.getElementById('Chat').style.display = 'none';
 
   // Reset chatRoom text to indicate no room connection.
-  chatRoom.innerHTML = "Chatroom : None";
+  chatRoom.innerHTML = "Chatroom: None";
 
   // If the user is in a room, emit a leave event.
   if (rooms[socket.id]) {

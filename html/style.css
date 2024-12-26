@@ -1,237 +1,182 @@
-body{
-  background-image: url('https://micdropmessages.app/pictures/andy-holmes-rCbdp8VCYhQ-unsplash.jpg'); /* Path to your example image */
-  background-size: cover; /* Cover the entire viewport */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-attachment: fixed; /* The background image does not scroll */
-  color: #ffffff; /* Light text color for contrast */
-  font-family: 'Roboto';
-  display: flex; /* Use flexbox to center content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
-label{
-  min-width: 70px; /* Ensure label has enough width */
-  display: block; /* Make labels stack above inputs and buttons */
-  margin-bottom: 0.5em; /* Provide some space between label and input/button */
-  text-align: left; /* Align text to the left */
+#Main {
+  background: rgba(32, 32, 32, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-input{
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff; /* Light text color for contrast */
-  font-size: 120%;
+#Main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #0078d4;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.button, .button2 {
+  background: rgba(255, 255, 255, 0.08);
   border: none;
-  width: 100%; /* Full width input fields */
-  box-sizing: border-box; /* Border box sizing for padding and borders */
-  margin-bottom: 1em; /* Provide space below inputs */
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px 0;
+  backdrop-filter: blur(4px);
 }
 
-.Message{
-  color: #ffffff; /* Light text color for contrast */
-  word-wrap: break-word; /* Break long words */
-  word-break: break-all; /* Break long words */
-  white-space: pre-wrap; /* Wrap text maintaining white spaces */
+.button:hover, .button2:hover {
+  background: #0078d4;
+  transform: translateY(-2px);
 }
 
-.other {
-  width: 100%; /* Set width */
-  text-align: center; /* Center inline and inline-block elements within */
+.button:active, .button2:active {
+  transform: translateY(0);
+  background: #006cbd;
 }
 
-#Logo{
-  height: 80px;
+.Message {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: fadeIn 0.3s ease;
 }
 
-#Chat{
-  display: none;
-  width: 100%; /* Make the chat part fill the entire width */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#Main{
-  min-height: 94.5vh; /* Stretch to fill the viewport height */
-  width: 50%;
-  padding: 20px; /* Padding added to the main content area */
-  border-radius: 10px;
-  backdrop-filter: blur(5px); /* Provide a translucent frosted-glass effect */
-  -webkit-backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.1); /* Slightly transparent dark background */
-  display: flex; /* Adding flex properties to layout contents */
-  flex-direction: column; /* Stack children elements vertically */
-  align-items: center; /* Centering child elements horizontally */
-  position: relative; /* To position the version number correctly */
+#Title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, #0078d4, #00b4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGlow 2s ease-in-out infinite alternate;
 }
 
-#Title{
-  font-size: 300%;
+@keyframes titleGlow {
+  from {
+    filter: drop-shadow(0 0 2px rgba(0, 120, 212, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 10px rgba(0, 120, 212, 0.6));
+  }
 }
 
-#LinkButtons{
-  display: inline-block;
-}
-
-#ConnectButton {
+#Logo {
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 20px 40px; /* Increase the padding to make the button bigger */
-  font-size: 20px; /* Increase the font-size for better readability on small screens */
+  height: 80px;
+  animation: float 3s ease-in-out infinite;
 }
 
-#errorButton {
-  padding: 16px 31px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  width: auto;
-  margin: 0.5em 0;
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-  border: 0px solid #000000;
-  cursor: pointer;
-  color: #ffffff; /* Light text color for contrast */
-  font-size: 17px;
-  text-shadow: 0px 1px 0px #000000;
-  display: block;
-  margin: 20px;
-}
-
-#errorButton:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-#errorButton:active {
-  position: relative;
-  top: 1px;
-}
-
-#errorText {
-  margin-left: 20px;
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .error-popup {
   display: none;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-  backdrop-filter: blur(20px); /* Provide a translucent frosted-glass effect */
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 2;
+  background: rgba(32, 32, 32, 0.95);
+  backdrop-filter: blur(20px);
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .error-popup-content {
-  background-color: #fefefe;
-  margin: auto;
+  background: #202020;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 12px;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 5px;
-  text-align: center; /* Center the content inside the error popup */
-}
-
-.button {
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-  border-radius: 28px;
-  border: 0px solid #000000;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff; /* Light text color for contrast */
-  font-size: 17px;
-  padding: 16px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #000000;
-  transition: background-color 0.3s ease; /* Transition for button hover effects */
-  width: auto; /* Width is determined by content within */
-  margin: 0.5em 0; /* Margin around buttons */
-}
-
-.button:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.button:active {
-  position: relative;
-  top: 1px;
-}
-
-.input {
-  border-radius: 10px;
-  padding: 6px;
-  width: 100%;  /* Full width input fields */
-  box-sizing: border-box;  /* Border box sizing for padding and borders */
-}
-
-.button2 {
-  border-radius: 10px;
-  padding: 6px;
-  transition: background-color 0.3s ease; /* Transition for button hover effects */
-  width: auto; /* Width is determined by content within */
-  margin: 0.5em 0; /* Margin around buttons */
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent background */
-  color: #ffffff; /* Light text color for contrast */
-}
-
-.button2:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.version-number {
-  position: absolute;
-  bottom: 1px;
-  right: 10px;
-  font-size: 0.75em;
-  color: #ffffff; /* Light text color for contrast */
+  text-align: center;
+  max-width: 300px;
 }
 
 @media (max-width: 900px) {
-  label {
-    width: auto; /* Full width on narrow screens */
+  body {
+    background: #202020;
   }
+  
   #Main {
-    width: 100%; /* Full width on narrow screens */
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  
+  #Main:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  #SendMessage, #LeaveRoomButton, #ConnectButton {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 8px auto;
   }
 }
 
 @media (max-width: 650px) {
   #Title {
-    font-size: 150%;
+    font-size: 2rem;
   }
-  #ConnectButton {
-    display: block;
-    margin: 0 auto;
-    padding: 20px 40px; /* Increase the padding to make the button bigger */
-    font-size: 20px; /* Increase the font-size for better readability on small screens */
-  }
-  #WebsiteButton {
-    display: block;
-    margin: 0 auto;
-  }
-  #LinkButtons {
-    text-align: center;
-  }
-  #SendMessage {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 20px 40px; /* Increase the padding to make the button bigger */
-    font-size: 20px; /* Increase the font-size for better readability on small screens */
-  }
-  #LeaveRoomButton {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 20px 40px; /* Increase the padding to make the button bigger */
-    font-size: 20px; /* Increase the font-size for better readability on small screens */
-  }
+}
+
+#Chat {
+  display: none;
 }

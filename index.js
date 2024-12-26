@@ -24,13 +24,13 @@ io.on('connection', function(socket){
       usernames[socket.id] = username;
       socket.leaveAll();
       socket.join(room);
-      io.in(room).emit("recieve", "Server : " + username + " has entered the chat.");
+      io.in(room).emit("recieve", "Server: " + username + " has entered the chat.");
       socket.emit("join", room);
     }
   })
 
   socket.on("send", function(message){
-    io.in(rooms[socket.id]).emit("recieve", usernames[socket.id] +" : " + message);
+    io.in(rooms[socket.id]).emit("recieve", usernames[socket.id] +": " + message);
   })
 
   socket.on("recieve", function(message){
@@ -40,7 +40,7 @@ io.on('connection', function(socket){
   socket.on("leave", function(room, username){
     if (room && username) {
       socket.leave(room);
-      io.in(room).emit("recieve", "Server : " + username + " has left the chat.");
+      io.in(room).emit("recieve", "Server: " + username + " has left the chat.");
     }
   });
 })
